@@ -26,12 +26,6 @@ window.visualViewport.addEventListener("resize", viewportHandler);
 bottomBar.addEventListener("touchmove", (e) => e.preventDefault(), {
   passive: false,
 });
-scrolling.addEventListener("touchmove", (e) => e.stopPropagation());
-document.addEventListener("touchmove", (e) => e.preventDefault(), {
-  passive: false,
-});
-bottomBar.addEventListener("touchstart", viewportHandler)
-document.getElementById("text").addEventListener("focus", () => window.scrollTo(0, 0))
 
 document.body.style.minHeight = `${window.innerHeight}px`;
 viewportHandler();
